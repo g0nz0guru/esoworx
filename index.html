@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESO - Engineering Services Office | IT Solutions Egypt</title>
+  <meta name="description" content="Egypt's leading IT service provider offering managed IT services, cloud solutions, cybersecurity, and digital transformation. Certified professionals serving businesses across Egypt." />
+  <!-- Google Fonts: Roboto for body and Roboto Slab for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Roboto Slab', serif;
+      color: #1e293b;
+    }
+
+    /* Header & Navigation */
+    .navbar {
+      position: fixed;
+      width: 100%;
+      padding: 1.5rem 5%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(45deg, #f8fafc, #e2e8f0);
+      padding: 0 5%;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+      background: #2563eb;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Sections Common Styles */
+    .section {
+      padding: 5rem 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    /* About Section */
+    .about-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .core-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .value-card {
+      padding: 2rem;
+      background: #f1f5f9;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .value-card h3 {
+      color: #2563eb;
+      margin-bottom: 1rem;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      padding: 2rem;
+      border-radius: 15px;
+      background: #f8fafc;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      color: #2563eb;
+      margin-bottom: 1rem;
+    }
+
+    /* Why Choose Us Section */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .benefit-card {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .benefit-card h3 {
+      color: #2563eb;
+      margin-bottom: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-info {
+      background: #f1f5f9;
+      padding: 2rem;
+      border-radius: 15px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 3rem 5%;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-content h1 { font-size: 2.5rem; }
+      .contact-wrapper { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Engineering Services Office</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Your Business Through Innovative IT Solutions</h1>
+      <p>Welcome to ESO, Engineering Services Office – Egypt’s trusted partner for cutting-edge IT solutions. We combine local expertise with global technology trends to deliver services that drive growth, efficiency, and competitive advantage.</p>
+      <a href="#services" class="cta-button">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="about-content">
+      <h2 class="section-title">Who We Are</h2>
+      <p>At ESO, Engineering Services Office, we believe that technology is the cornerstone of modern business success. Founded in Egypt, our company is built on a foundation of engineering excellence and innovative IT practices.</p>
+      
+      <div class="core-values">
+        <div class="value-card">
+          <h3>Excellence</h3>
+          <p>Superior services that exceed expectations</p>
+        </div>
+        <div class="value-card">
+          <h3>Innovation</h3>
+          <p>Adopting the latest technologies &amp; best practices</p>
+        </div>
+        <div class="value-card">
+          <h3>Integrity</h3>
+          <p>Transparent and ethical operations</p>
+        </div>
+        <div class="value-card">
+          <h3>Collaboration</h3>
+          <p>Partnering for lasting success</p>
+        </div>
+      </div>
+
+      <div class="mission-vision">
+        <h3>Our Mission</h3>
+        <p>"To empower businesses by delivering reliable, secure, and scalable IT solutions that drive digital transformation and sustainable growth."</p>
+        
+        <h3 style="margin-top: 2rem;">Our Vision</h3>
+        <p>"To be Egypt’s leading IT service provider, recognized for our engineering excellence, innovative approach, and unwavering commitment to client success."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-shield-alt service-icon"></i>
+        <h3>Managed IT Services</h3>
+        <p>Proactive support and maintenance solutions with 24/7 monitoring and rapid issue resolution.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cloud service-icon"></i>
+        <h3>Cloud Solutions</h3>
+        <p>Secure, scalable, and cost-effective cloud computing services with seamless migration.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-lock service-icon"></i>
+        <h3>Cybersecurity</h3>
+        <p>Comprehensive risk assessments, advanced threat detection, and continuous monitoring.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-code service-icon"></i>
+        <h3>Software Development</h3>
+        <p>Custom applications that streamline operations and drive business growth.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cogs service-icon"></i>
+        <h3>IT Consulting</h3>
+        <p>Strategic roadmaps and digital transformation guidance to future-proof your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="section">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Proven Expertise</h3>
+        <p>Certified IT professionals with years of experience delivering successful projects.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Customized Solutions</h3>
+        <p>Tailored services aligned with your business goals and industry requirements.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Local Insight, Global Expertise</h3>
+        <p>Deep understanding of the Egyptian market combined with global best practices.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>24/7 Support</h3>
+        <p>Round-the-clock service to ensure uninterrupted business operations.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Innovative Technology</h3>
+        <p>Continuously updated solutions to keep you ahead in the digital landscape.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Let’s Transform Your Business Together</h3>
+        <p>Are you ready to elevate your IT infrastructure and embrace digital innovation? Contact our team today to discuss your requirements, request a quote, or schedule a consultation.</p>
+        <p>📍 Address: [Your Office Address], Egypt</p>
+        <p>📞 Phone: +20 XXX XXX XXXX</p>
+        <p>📧 Email: info@eso-egypt.com</p>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone" required>
+        <select required>
+          <option value="">Select Service</option>
+          <option>Managed IT Services</option>
+          <option>Cloud Solutions</option>
+          <option>Cybersecurity</option>
+          <option>Software Development</option>
+          <option>IT Consulting</option>
+        </select>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 ESO - Engineering Services Office. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
